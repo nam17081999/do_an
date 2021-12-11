@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 20px;
+}
+
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.top-bar {
+    background-color: black;
+    color: white;
+}
+
+.top-bar .row {
+    display: flex;
+    align-items: center;
+}
+
+.top-bar .row a {
+    color: white;
+}
+
+.top-bar .smh {
+    flex: 1;
+}
+
+.top-bar .col {
+    padding: 10px;
+}
