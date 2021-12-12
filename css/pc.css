@@ -9,6 +9,15 @@ html {
     font-size: 20px;
 }
 
+body {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.header {
+    margin-top: 20px;
+}
+
 .container {
     max-width: 980px;
     margin: 0 auto;
