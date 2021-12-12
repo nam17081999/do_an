@@ -97,7 +97,7 @@
     
     .main .hello {
         background-color: white;
-        background-image: url("/media/0000000619-tre-em-hoc-bai-hoc-tap-cau-be-tai-hinh-png-101.png");
+        background-image: url("/media/doc-sach.png");
         background-position: right;
         background-repeat: no-repeat;
         background-size: contain;
@@ -113,7 +113,29 @@
         box-shadow: 10px -6px 6px -8px #999999 inset
     }
     
-    .footer iframe {
-        width: 100%;
-        height: 100%;
+    .footer .container {
+        margin: 20px 5%;
+    }
+    
+    .members {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #e4e9ff;
+        border-radius: 15px;
+        box-shadow: #999999 0px 0px 5px 3px;
+        margin-top: 10px;
+    }
+    
+    .son-members {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px auto;
+    }
+    
+    .members img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50px;
     }
