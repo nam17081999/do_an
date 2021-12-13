@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body onload="startTime()">
     <div class="big-container">
         <div class="header">
             <div class="top-bar">
@@ -57,6 +57,28 @@
 
                         <a href="">Information</a>
                     </div>
+
+
+                    <div id="txt"></div>
+                    <script>
+                        function startTime() {
+                            const today = new Date();
+                            let h = today.getHours();
+                            let m = today.getMinutes();
+                            let s = today.getSeconds();
+                            m = checkTime(m);
+                            s = checkTime(s);
+                            document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+                            setTimeout(startTime, 1000);
+                        }
+
+                        function checkTime(i) {
+                            if (i < 10) {
+                                i = "0" + i
+                            }; // add zero in front of numbers < 10
+                            return i;
+                        }
+                    </script>
                     <div class="col fb">
                         <div class="son-fb">
                             <img class="nam-tuoc" src="/media/admin.png" alt="Nam Logo">
@@ -193,11 +215,59 @@
                         </div>
                     </div>
 
-                    <div class="col"></div>
+                    <div class="col">
+                        <h3>Weather</h3>
+                        <div class="son-footer-container">
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item item-1">
+                                    <div class="accordion-header">
+                                        <div class="accordion-button">
+                                        </div>
+                                    </div>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="temp"></div>
+                                            <div class="humidity"></div>
+                                            <div class="uvi"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item item-2">
+                                    <div class="accordion-header">
+                                        <div class="accordion-button">
+                                        </div>
+                                    </div>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="temp"></div>
+                                            <div class="humidity"></div>
+                                            <div class="uvi"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item item-3">
+                                    <div class="accordion-header">
+                                        <div class="accordion-button">
+                                        </div>
+                                    </div>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="temp"></div>
+                                            <div class="humidity"></div>
+                                            <div class="uvi"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/cursor.js"></script>
 
 </body>
 
