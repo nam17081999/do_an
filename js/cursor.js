@@ -4,7 +4,7 @@ function getLocation() {
         navigator.geolocation.getCurrentPosition((position) => {
             $.ajax({
                 method: "get",
-                url: `https://api.openweathermap.org/data/2.5/onecall?lat=${position.coords.latitude}&lon=${position.coords.longitude}&lang=vi&units=metric&exclude=alerts&appid=c1cfab6cee8d1e339c7b4186e7131d99`,
+                url: `https://api.openweathermap.org/data/2.5/onecall?lat=${position.coords.latitude}&lon=${position.coords.longitude}&lang=vi&units=metric&exclude=alerts&appid=d02ad85bc955b07b0adad6de67f6be7`,
             }).then((data) => {
                 showCalendar(data.daily);
             });
@@ -34,8 +34,8 @@ function showCalendar(data) {
       }</span>`;
         item.querySelector(
             ".temp"
-        ).innerHTML = `<div><span class="weather-label">↑ Temp: </span>${data[index].temp.max}°C</div>
-      <div><span class="weather-label">↓ Temp: </span>${data[index].temp.min}°C</div>`;
+        ).innerHTML = `<div><span class="weather-label">Max: </span>${data[index].temp.max}°C</div>
+      <div><span class="weather-label">Min: </span>${data[index].temp.min}°C</div>`;
         item.querySelector(
             ".humidity"
         ).innerHTML = `<div><span class="weather-label">Humidity: </span>${data[index].humidity}%</div>`;

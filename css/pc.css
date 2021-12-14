@@ -10,7 +10,8 @@ a {
 
 html {
     font-family: 'Balsamiq Sans', cursive;
-    font-size: 20px;
+    /* font-family: Helvetica, Arial, sans-serif; */
+    font-size: 18px;
     color: black;
 }
 
@@ -26,8 +27,8 @@ svg {
 .switch {
     position: relative;
     display: inline-block;
-    width: 55px;
-    height: 30px;
+    width: 40px;
+    height: 25px;
 }
 
 .switch input {
@@ -51,8 +52,8 @@ svg {
 .slider:before {
     position: absolute;
     content: "";
-    height: 20px;
-    width: 20px;
+    height: 15px;
+    width: 15px;
     left: 5px;
     bottom: 5px;
     background-color: white;
@@ -65,9 +66,9 @@ input:checked+.slider {
 }
 
 input:checked+.slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+    -webkit-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    transform: translateX(15px);
 }
 
 
@@ -89,13 +90,18 @@ body {
     background-color: White;
     background-size: cover;
     background-color: #f8dac8;
+    display: flex;
 }
 
 .big-container {
     display: flex;
     justify-content: space-between;
     background-color: white;
-    height: 100vh;
+    height: 90vh;
+    max-width: 1500px;
+    margin: 5vh auto;
+    border-radius: 25px;
+    box-shadow: #999999 0px 0px 5px 1px;
 }
 
 .header {
@@ -118,11 +124,22 @@ a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    height: 100%;
+    /* height: 100%; */
 }
 
 .top-bar .col {
     margin: 25px;
+}
+
+.oclock {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    margin: 0 auto;
+}
+
+.oclock #txt {
+    max-width: 100%;
 }
 
 .top-bar .nam-tuoc {
@@ -134,11 +151,11 @@ a {
 .top-bar .fb {
     display: flex;
     align-items: flex-end;
-    flex: 1;
 }
 
 .top-bar .fb .son-fb {
     display: flex;
+    align-items: center;
     background-color: #e4e9ff;
     padding: 10px;
     border-radius: 15px;
@@ -159,18 +176,43 @@ a {
     box-shadow: 10px -6px 6px -8px #999999 inset;
 }
 
+.main-container {
+    margin: 0px 20px;
+    margin-top: 50px;
+}
+
+.home-asis {
+    margin-left: 70px;
+}
+
+.main .asistant {
+    display: flex;
+    align-items: flex-end;
+}
+
+.main .asistant #ggasis {
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    box-shadow: #999999 0px 0px 5px 1px;
+    margin-right: 15px;
+}
+
+.asistant>p {
+    margin-left: 20px;
+}
+
 .main .hello {
     background-color: white;
-    background-image: url("/media/doc-sach.png");
+    background-image: url("/media/asistant.jpg");
     background-position: right;
     background-repeat: no-repeat;
     background-size: contain;
     height: auto;
     border-radius: 25px;
-    margin: 20px;
     padding: 20px 120px 20px 20px;
     box-shadow: #999999 0px 0px 5px 1px;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .footer {
@@ -180,7 +222,14 @@ a {
 
 .footer .container {
     margin: 0px 5%;
-    margin-top: 30px;
+    height: 100%;
+}
+
+.footer .row {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .diveces-mod {
@@ -211,7 +260,8 @@ a {
 }
 
 .son-dv p {
-    margin-top: 15px;
+    margin-top: 10px;
+    font-size: 15px;
 }
 
 .water-heater,
@@ -236,7 +286,7 @@ a {
 }
 
 .footer .col {
-    margin-top: 50px;
+    margin-top: 2vh;
 }
 
 .members {
@@ -257,8 +307,8 @@ a {
 }
 
 .members img {
-    width: 10vh;
-    height: 10vh;
+    width: 8vh;
+    height: 8vh;
     border-radius: 45px;
 }
 
@@ -287,7 +337,7 @@ a {
 .accordion-item {
     border-radius: 25px;
     box-shadow: #999999 0px 0px 5px 1px;
-    padding: 0px 10px;
+    padding: 0px 2px;
 }
 
 .accordion-collapse {

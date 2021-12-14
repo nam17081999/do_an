@@ -57,28 +57,28 @@
 
                         <a href="">Information</a>
                     </div>
+                    <div class=" oclock">
+                        <div id="txt"></div>
+                        <script>
+                            function startTime() {
+                                const today = new Date();
+                                let h = today.getHours();
+                                let m = today.getMinutes();
+                                let s = today.getSeconds();
+                                m = checkTime(m);
+                                s = checkTime(s);
+                                document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+                                setTimeout(startTime, 1000);
+                            }
 
-
-                    <div id="txt"></div>
-                    <script>
-                        function startTime() {
-                            const today = new Date();
-                            let h = today.getHours();
-                            let m = today.getMinutes();
-                            let s = today.getSeconds();
-                            m = checkTime(m);
-                            s = checkTime(s);
-                            document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
-                            setTimeout(startTime, 1000);
-                        }
-
-                        function checkTime(i) {
-                            if (i < 10) {
-                                i = "0" + i
-                            }; // add zero in front of numbers < 10
-                            return i;
-                        }
-                    </script>
+                            function checkTime(i) {
+                                if (i < 10) {
+                                    i = "0" + i
+                                }; // add zero in front of numbers < 10
+                                return i;
+                            }
+                        </script>
+                    </div>
                     <div class="col fb">
                         <div class="son-fb">
                             <img class="nam-tuoc" src="/media/admin.png" alt="Nam Logo">
@@ -93,35 +93,42 @@
         </div>
 
         <div class="main">
-            <div class="row">
-                <div class="col hello">
-                    <script>
-                        now = new Date();
-                        now.setTime((now.getTime() + now.getTimezoneOffset() * 60 * 1000) + (4 * 60 * 60 * 1000));
-                        date = now.getHours();
-                        if (date < 12) {
-                            document.write("Good Morning!")
-                        } else {
-                            if (date < 18) {
-                                document.write("Good Afternoon!")
-                            } else {
-                                if (date < 23) {
-                                    document.write("Good Everning!")
+            <div class="main-container">
+                <div class="row">
+                    <p class="home-asis"> Home Assistant </p>
+                    <div class="asistant">
+                        <img id="ggasis" src="/media/asistant.png" alt="Home">
+                        <div class="col hello">
+                            <script>
+                                now = new Date();
+                                now.setTime((now.getTime() + now.getTimezoneOffset() * 60 * 1000) + (4 * 60 * 60 * 1000));
+                                date = now.getHours();
+                                if (date < 12) {
+                                    document.write("Good Morning!")
                                 } else {
-                                    document.write("Good Night!")
+                                    if (date < 18) {
+                                        document.write("Good Afternoon!")
+                                    } else {
+                                        if (date < 23) {
+                                            document.write("Good Everning!")
+                                        } else {
+                                            document.write("Good Night!")
+                                        }
+                                    }
                                 }
-                            }
-                        }
-                    </script>
-                    <p>Welcome Home! The weather is very cold today, and you should stay at home! And remember to wear a mask when you leave the house!</p>
-                    <p>abc</p>
-                    <p>abc</p>
-                </div>
-                <div class="col">
+                            </script>
+                            <p>Welcome Home! The weather is very cold today, and you should stay at home! And remember to wear a mask when you leave the house!</p>
+                            <p>abc</p>
+                            <p>abc</p>
+                        </div>
+                    </div>
 
-                </div>
-                <div class="col">
+                    <div class="col">
 
+                    </div>
+                    <div class="col">
+
+                    </div>
                 </div>
             </div>
         </div>
