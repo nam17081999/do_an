@@ -4,7 +4,7 @@ function getLocation() {
         navigator.geolocation.getCurrentPosition((position) => {
             $.ajax({
                 method: "get",
-                url: `https://api.openweathermap.org/data/2.5/onecall?lat=${position.coords.latitude}&lon=${position.coords.longitude}&lang=vi&units=metric&exclude=alerts&appid=d02ad85bc955b07b0adad6de67f6be7`,
+                url: `https://api.openweathermap.org/data/2.5/onecall?lat=${position.coords.latitude}&lon=${position.coords.longitude}&lang=vi&units=metric&exclude=alerts&appid=d02ad85bc955b07b0adad6de67f6be7e`,
             }).then((data) => {
                 showCalendar(data.daily);
             });
