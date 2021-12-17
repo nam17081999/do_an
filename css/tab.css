@@ -1,0 +1,19 @@
+        @media (max-width: 1468px) and (min-width: 1001px) {
+            .big-container {
+                width: max-content;
+                min-height: 100%;
+            }
+            .top-bar .fb .son-fb {
+                display: flex;
+            }
+            .link-fb {
+                display: none;
+            }
+            .diveces-mod {
+                display: flex;
+                flex-direction: column;
+            }
+            .son-dv {
+                width: 100%;
+            }
+        }
