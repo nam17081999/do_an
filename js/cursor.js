@@ -20,7 +20,7 @@ function showCalendar(data) {
     let arrDom = [...dom];
     const options = {
         weekday: "short",
-        month: "short",
+        month: "numeric",
         day: "numeric",
     };
     const timeCurrent = Date.now();
@@ -30,7 +30,7 @@ function showCalendar(data) {
         ).innerHTML = `<img src="http://openweathermap.org/img/wn/${
         data[index].weather[0].icon}@2x.png"  alt="${data[index].weather[0].main}">${new Date(
         timeCurrent + index * 86400000
-      ).toLocaleDateString("en", options)
+      ).toLocaleDateString("vi", options)
       }</span>`;
         item.querySelector(
             ".temp"
@@ -38,11 +38,9 @@ function showCalendar(data) {
       <div><span class="weather-label">Min: </span>${data[index].temp.min}°C</div>`;
         item.querySelector(
             ".humidity"
-        ).innerHTML = `<div><span class="weather-label">Humidity: </span>${data[index].humidity}%</div>`;
+        ).innerHTML = `<div><span class="weather-label">Độ Ẩm: </span>${data[index].humidity}%</div>`;
         item.querySelector(
             ".uvi"
         ).innerHTML = `<div><span class="weather-label">UV: </span>${data[index].uvi}</div>`;
     });
 }
-
-// ]]>

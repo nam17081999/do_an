@@ -8,9 +8,10 @@
     <title>Smart Home</title>
     <audio src="./media/Windows Logon.wav" autoplay noloop></audio>
     <link rel="stylesheet" href="/css/pc.css">
+    <link href="/font/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet">
 </head>
 
 <body onload="startTime()">
@@ -38,7 +39,7 @@
                             <circle cx="15" cy="16" r="2.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></circle>
                           </svg>
 
-                        <a href="">Control</a>
+                        <a href="">Điều Khiển</a>
                     </div>
                     <div class="col">
                         <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -46,7 +47,7 @@
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.25 12C13.25 12.6904 12.6904 13.25 12 13.25C11.3096 13.25 10.75 12.6904 10.75 12C10.75 11.3096 11.3096 10.75 12 10.75C12.6904 10.75 13.25 11.3096 13.25 12Z"></path>
                           </svg>
 
-                        <a href="">Setting</a>
+                        <a href="">Cài Đặt</a>
                     </div>
                     <div class="col">
                         <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -55,7 +56,7 @@
                             <circle cx="12" cy="12" r="7.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></circle>
                           </svg>
 
-                        <a href="">Information</a>
+                        <a href="">Thông Tin</a>
                     </div>
                     <div class=" oclock">
                         <div id="txt"></div>
@@ -95,136 +96,9 @@
         <div class="main">
             <div class="main-container">
                 <div class="row">
-                    <p class="home-asis"> Home Assistant </p>
-                    <div class="asistant">
-                        <img id="ggasis" src="/media/asistant.png" alt="Home">
-                        <div class="col hello">
-                            <script>
-                                now = new Date();
-                                now.setTime((now.getTime() + now.getTimezoneOffset() * 60 * 1000) + (4 * 60 * 60 * 1000));
-                                date = now.getHours();
-                                if (date < 12) {
-                                    document.write("Good Morning!")
-                                } else {
-                                    if (date < 18) {
-                                        document.write("Good Afternoon!")
-                                    } else {
-                                        if (date < 23) {
-                                            document.write("Good Everning!")
-                                        } else {
-                                            document.write("Good Night!")
-                                        }
-                                    }
-                                }
-                            </script>
-                            <p>Welcome Home! The weather is very cold today, and you should stay at home! And remember to wear a mask when you leave the house!</p>
-                            <p>abc</p>
-                            <p>abc</p>
-                        </div>
-                    </div>
-
                     <div class="col">
-
-                    </div>
-                    <div class="col">
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h3>Usually Used</h3>
-                        <div class="usually-used">
-                            <div class="diveces-mod">
-                                <div class="water-heater son-dv">
-                                    <div><svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.75 8.75C4.75 7.64543 5.64543 6.75 6.75 6.75H15.25C16.3546 6.75 17.25 7.64543 17.25 8.75V15.25C17.25 16.3546 16.3546 17.25 15.25 17.25H6.75C5.64543 17.25 4.75 16.3546 4.75 15.25V8.75Z"></path>
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.75 10.75H18C18.6904 10.75 19.25 11.3096 19.25 12V12C19.25 12.6904 18.6904 13.25 18 13.25H17.75"></path>
-                                  </svg>
-                                        <p>Water Heater</p>
-                                    </div>
-                                    <label class="switch">
-                                    <input type="checkbox" checked>
-                                    <span class="slider round"></span>
-                                  </label>
-                                </div>
-                                <div class="router son-dv">
-                                    <div><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M4.75 14.75V17.25C4.75 18.3546 5.64543 19.25 6.75 19.25H17.25C18.3546 19.25 19.25 18.3546 19.25 17.25V14.75C19.25 13.6454 18.3546 12.75 17.25 12.75H6.75C5.64543 12.75 4.75 13.6454 4.75 14.75Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        <path d="M8.5 16C8.5 16.2761 8.27614 16.5 8 16.5C7.72386 16.5 7.5 16.2761 7.5 16C7.5 15.7239 7.72386 15.5 8 15.5C8.27614 15.5 8.5 15.7239 8.5 16Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        <path d="M11.5 16C11.5 16.2761 11.2761 16.5 11 16.5C10.7239 16.5 10.5 16.2761 10.5 16C10.5 15.7239 10.7239 15.5 11 15.5C11.2761 15.5 11.5 15.7239 11.5 16Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        <path d="M12 12.5V10.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        <path d="M9.7019 8.7019C10.9711 7.4327 13.0289 7.4327 14.2981 8.7019" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        <path d="M7.58057 6.58058C10.0213 4.13981 13.9786 4.13981 16.4194 6.58058" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg>
-                                        <p>Router</p>
-                                    </div>
-                                    <label class="switch">
-                                    <input type="checkbox" checked>
-                                    <span class="slider round"></span>
-                                  </label>
-                                </div>
-                                <div class="porch-light son-dv">
-                                    <div><svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                        <circle cx="12" cy="12" r="3.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></circle>
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 2.75V4.25"></path>
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.25 6.75L16.0659 7.93416"></path>
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21.25 12.0001L19.75 12.0001"></path>
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.25 17.2501L16.0659 16.066"></path>
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19.75V21.25"></path>
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7.9341 16.0659L6.74996 17.25"></path>
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.25 12.0001L2.75 12.0001"></path>
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7.93405 7.93423L6.74991 6.75003"></path>
-                                      </svg>
-                                        <p>Porch Light</p>
-                                    </div>
-                                    <label class="switch">
-                                    <input type="checkbox" checked>
-                                    <span class="slider round"></span>
-                                  </label>
-                                </div>
-                                <div class="exhaust-fan son-dv">
-                                    <div><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 4.75V6.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        <path d="M17.1266 6.87347L16.0659 7.93413" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        <path d="M19.25 12L17.75 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        <path d="M17.1266 17.1265L16.0659 16.0659" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        <path d="M12 17.75V19.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        <path d="M7.9342 16.0659L6.87354 17.1265" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        <path d="M6.25 12L4.75 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        <path d="M7.9342 7.93413L6.87354 6.87347" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg>
-                                        <p>Exhaust Fan</p>
-                                    </div>
-                                    <label class="switch">
-                                    <input type="checkbox" checked>
-                                    <span class="slider round"></span>
-                                  </label>
-                                </div>
-                            </div>
-                            <div class="diveces-mod"></div>
-                            <div class="diveces-mod"></div>
-                        </div>
-                    </div>
-                    <div class="col big-members">
-                        <h3>Members</h3>
-                        <div class="members">
-                            <div class="son-members">
-                                <a href=""><img src="/media/admin.png" alt="admin"></a><a href="">Admin</a></div>
-                            <div class="son-members">
-                                <a href=""><img src="/media/people-1.png" alt="peo1"></a><a href="">Uncle</a></div>
-                            <div class="son-members">
-                                <a href=""><img src="/media/people-2.png" alt="peo2"></a><a href="">Son</a></div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <h3>Weather</h3>
                         <div class="son-footer-container">
+                            <h3>Thời Tiết</h3>
                             <div class="accordion" id="accordionExample">
                                 <div class="accordion-item item-1">
                                     <div class="accordion-header">
@@ -265,9 +139,212 @@
                                         </div>
                                     </div>
                                 </div>
-
+                                <div class="accordion-item item-4">
+                                    <div class="accordion-header">
+                                        <div class="accordion-button">
+                                        </div>
+                                    </div>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="temp"></div>
+                                            <div class="humidity"></div>
+                                            <div class="uvi"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item item-5">
+                                    <div class="accordion-header">
+                                        <div class="accordion-button">
+                                        </div>
+                                    </div>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="temp"></div>
+                                            <div class="humidity"></div>
+                                            <div class="uvi"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item item-6">
+                                    <div class="accordion-header">
+                                        <div class="accordion-button">
+                                        </div>
+                                    </div>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="temp"></div>
+                                            <div class="humidity"></div>
+                                            <div class="uvi"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item item-7">
+                                    <div class="accordion-header">
+                                        <div class="accordion-button">
+                                        </div>
+                                    </div>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="temp"></div>
+                                            <div class="humidity"></div>
+                                            <div class="uvi"></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="col">
+                        <h3>Home Assistant</h3>
+                        <div class="hello">
+                            <script>
+                                now = new Date();
+                                now.setTime((now.getTime() + now.getTimezoneOffset() * 60 * 1000) + (4 * 60 * 60 * 1000));
+                                date = now.getHours();
+                                if (date < 12) {
+                                    document.write("Good Morning!")
+                                } else {
+                                    if (date < 18) {
+                                        document.write("Good Afternoon!")
+                                    } else {
+                                        if (date < 23) {
+                                            document.write("Good Everning!")
+                                        } else {
+                                            document.write("Good Night!")
+                                        }
+                                    }
+                                }
+                            </script>
+                            <p>Welcome Home! The weather is very cold today, and you should stay at home! And remember to wear a mask when you leave the house!</p>
+                            <i class="fas fa-thermometer-half"></i>
+                            <i class="fas fa-tint"></i>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h3>Ngữ Cảnh</h3>
+                        <div class="ngucanh">
+                            <div class="ve-nha son-ngu-canh">
+                                <div class="mini-container">
+                                    <div class="chau-ngu-canh">
+                                        <i class="far fa-bookmark"></i>
+                                        <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                      </label>
+                                    </div>
+                                    <div class="tt-ngu-canh">
+                                        <p>Về Nhà</p>
+                                        <p class="real-tt-ngu-canh">Bật Đèn Phòng Khách <br> Bật Bình Nóng Lạnh</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nau-com son-ngu-canh">
+                                <div class="mini-container">
+                                    <div class="chau-ngu-canh">
+                                        <i class="far fa-bookmark"></i>
+                                        <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                      </label>
+                                    </div>
+                                    <div class="tt-ngu-canh">
+                                        <p>Nấu Cơm</p>
+                                        <p class="real-tt-ngu-canh">Bật Đèn Phòng Bếp <br> Bật Quạt Hút Mùi</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="roi-khoi-nha son-ngu-canh">
+                                <div class="mini-container">
+                                    <div class="chau-ngu-canh">
+                                        <i class="far fa-bookmark"></i>
+                                        <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                      </label>
+                                    </div>
+                                    <div class="tt-ngu-canh">
+                                        <p>Rời Khỏi Nhà</p>
+                                        <p class="real-tt-ngu-canh">Tắt Các Thiết Bị<br>(Không Sử Dụng)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h3>Thường Sử Dụng</h3>
+                        <div class="usually-used">
+                            <div class="diveces-mod">
+                                <div class="water-heater son-dv">
+                                    <div><i class="fas fa-shower"></i>
+                                        <p>Nước Nóng</p>
+                                    </div>
+                                    <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                  </label>
+                                </div>
+                                <div class="router son-dv">
+                                    <div><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.75 14.75V17.25C4.75 18.3546 5.64543 19.25 6.75 19.25H17.25C18.3546 19.25 19.25 18.3546 19.25 17.25V14.75C19.25 13.6454 18.3546 12.75 17.25 12.75H6.75C5.64543 12.75 4.75 13.6454 4.75 14.75Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M8.5 16C8.5 16.2761 8.27614 16.5 8 16.5C7.72386 16.5 7.5 16.2761 7.5 16C7.5 15.7239 7.72386 15.5 8 15.5C8.27614 15.5 8.5 15.7239 8.5 16Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M11.5 16C11.5 16.2761 11.2761 16.5 11 16.5C10.7239 16.5 10.5 16.2761 10.5 16C10.5 15.7239 10.7239 15.5 11 15.5C11.2761 15.5 11.5 15.7239 11.5 16Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M12 12.5V10.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M9.7019 8.7019C10.9711 7.4327 13.0289 7.4327 14.2981 8.7019" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M7.58057 6.58058C10.0213 4.13981 13.9786 4.13981 16.4194 6.58058" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <p>Router</p>
+                                    </div>
+                                    <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                  </label>
+                                </div>
+                                <div class="porch-light son-dv">
+                                    <div>
+                                        <i class="far fa-lightbulb"></i>
+                                        <p>Đèn Hiên</p>
+                                    </div>
+                                    <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                  </label>
+                                </div>
+                                <div class="exhaust-fan son-dv">
+                                    <div>
+                                        <i class="fas fa-wind"></i>
+                                        <p>Hút Mùi</p>
+                                    </div>
+                                    <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                  </label>
+                                </div>
+                            </div>
+                            <div class="diveces-mod"></div>
+                            <div class="diveces-mod"></div>
+                        </div>
+                    </div>
+                    <div class="col big-members">
+                        <h3>Thành Viên</h3>
+                        <div class="members">
+                            <div class="son-members">
+                                <a href=""><img src="/media/admin.png" alt="admin"></a><a href="">Admin</a></div>
+                            <div class="son-members">
+                                <a href=""><img src="/media/people-1.png" alt="peo1"></a><a href="">Bác</a></div>
+                            <div class="son-members">
+                                <a href=""><img src="/media/people-2.png" alt="peo2"></a><a href="">Con Gái</a></div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+
                     </div>
                 </div>
             </div>
