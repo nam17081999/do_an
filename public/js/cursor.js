@@ -6,9 +6,9 @@ $(function() {
     socket.on('sensor', (msg) => {
         console.log(msg)
     });
-    socket.on('sensor', (msg) => {
-        document.getElementById("cambien").innerHTML = msg;
-    });
+    // socket.on('sensor', (msg) => {
+    //     document.getElementById("cambien").innerHTML = msg;
+    // });
 });
 
 // Jav
