@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Home</title>
-    <audio src="/public/media/Windows Logon.wav" autoplay noloop></audio>
-    <link rel="stylesheet" href="/public/css/main.css">
-    <link rel="stylesheet" href="/public/css/pc.css">
-    <link rel="stylesheet" href="/public/css/tab.css">
-    <link rel="stylesheet" href="/public/css/mobi.css">
-    <link href="/font/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
+    <audio src="./media/Windows Logon.wav" autoplay noloop></audio>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/pc.css">
+    <link rel="stylesheet" href="/css/tab.css">
+    <link rel="stylesheet" href="/css/mobi.css">
+    <link href="/public/font/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body onload="startTime()">
     <div class="big-container">
         <div class="header">
             <div class="top-bar">
@@ -62,7 +62,7 @@
                     <div class="col fb">
                         <div class="none">
                             <div class="son-fb">
-                                <img class="nam-tuoc" src="/public/media/admin.png" alt="Nam Logo">
+                                <img class="nam-tuoc" src="/media/admin.png" alt="Nam Logo">
                                 <div class="link-fb">
                                     <a href="https://www.facebook.com/mr.namtuoc/">Hoàng Nam </a>
                                     <p> Admin</p>
@@ -316,11 +316,11 @@
                         <h3>Thành Viên</h3>
                         <div class="members">
                             <div class="son-members">
-                                <a href=""><img src="/public/media/admin.png" alt="admin"></a><a href="">Admin</a></div>
+                                <a href=""><img src="/media/admin.png" alt="admin"></a><a href="">Admin</a></div>
                             <div class="son-members">
-                                <a href=""><img src="/public/media/people-1.png" alt="peo1"></a><a href="">Bác</a></div>
+                                <a href=""><img src="/media/people-1.png" alt="peo1"></a><a href="">Bác</a></div>
                             <div class="son-members">
-                                <a href=""><img src="/public/media/people-2.png" alt="peo2"></a><a href="">Con Gái</a></div>
+                                <a href=""><img src="/media/people-2.png" alt="peo2"></a><a href="">Con Gái</a></div>
                         </div>
                     </div>
 
@@ -331,9 +331,8 @@
             </div>
         </div>
     </div>
-    <script src="/public/js/jquery-3.6.0.min.js"></script>
-    <script src="/public/socket.io.js"></script>
-    <script src="/public/js/cursor.js"></script>
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/cursor.js"></script>
 
 
 </body>
