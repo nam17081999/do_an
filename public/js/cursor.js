@@ -1,10 +1,13 @@
-$(function () {
-var socket = io("https://namtuoc.herokuapp.com/")
+$(function() {
+    var socket = io("https://namtuoc.herokuapp.com/")
     socket.on('connected', (msg) => {
         console.log("1")
     });
     socket.on('sensor', (msg) => {
         console.log(msg)
+    });
+    socket.on('sensor', (msg) => {
+        document.getElementById("cambien").innerHTML = msg;
     });
 });
 
