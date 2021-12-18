@@ -1,11 +1,12 @@
 $(function () {
-    var socket = io("https://namtuoc.herokuapp.com/")
+var socket = io("https://namtuoc.herokuapp.com/")
     socket.on('connected', (msg) => {
+        console.log("1")
     });
     socket.on('sensor', (msg) => {
         console.log(msg)
     });
-  });
+});
 
 // Jav
 function getLocation() {
