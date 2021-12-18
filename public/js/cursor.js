@@ -1,3 +1,12 @@
+$(function () {
+    var socket = io("https://namtuoc.herokuapp.com/")
+    socket.on('connected', (msg) => {
+    });
+    socket.on('sensor', (msg) => {
+        console.log(msg)
+    });
+  });
+
 // Jav
 function getLocation() {
     if (navigator.geolocation) {

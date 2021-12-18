@@ -20,10 +20,8 @@ app.get("/", (req, res) => {
 
 io.on("connection", (socket) => {
   io.emit("connected", { msg: "connected" });
-  io.emit("vitriread", plate);
-  socket.on("vitri", (msg) => {
-    socket.broadcast.emit("vitriread", msg);
-    return (plate = msg);
+  socket.on("sensor", (msg) => {
+    socket.broadcast.emit("sensor", msg);
   });
   socket.on("arduino", function (data) {
     io.sockets.emit('atime', { time: new Date().toJSON() });
