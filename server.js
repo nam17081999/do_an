@@ -23,6 +23,9 @@ io.on("connection", (socket) => {
   socket.on("sensor", (msg) => {
     socket.broadcast.emit("sensor", msg);
   });
+  socket.on("led", (msg) => {
+    socket.broadcast.emit("led", msg);
+  });
   socket.on("arduino", function (data) {
     io.sockets.emit('atime', { time: new Date().toJSON() });
   });

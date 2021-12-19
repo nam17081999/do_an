@@ -7,11 +7,16 @@ $(function() {
         document.getElementById("cambien").innerHTML =  msg.message;
         console.log(msg)
     });
-    function ten() {
+    function ten(e) {
         socket.emit('arduino', {})
         console.log("nhan")
+        e.target.checked=true
     }
-    $('#ten').on("click",ten)
+    $('#den-hien').on("change",ten)
+    socket.on('sensor', (msg) => {
+        document.getElementById("cambien").innerHTML =  msg.message;
+        console.log(msg)
+    });
 });
 
 // Jav
