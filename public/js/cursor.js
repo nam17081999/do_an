@@ -1,7 +1,7 @@
 $(function() {
     var socket = io("https://namtuoc.herokuapp.com/")
     socket.on('connected', (msg) => {
-        console.log("1")
+        console.log("connected")
     });
     socket.on('sensor', (msg) => {
         document.getElementById("cambien").innerHTML =  msg.message;
@@ -10,12 +10,11 @@ $(function() {
     function ten(e) {
         socket.emit('arduino', {})
         console.log("nhan")
-        e.target.checked=true
     }
     $('#den-hien').on("change",ten)
-    socket.on('sensor', (msg) => {
-        document.getElementById("cambien").innerHTML =  msg.message;
-        console.log(msg)
+    socket.on('led', (msg) => {
+        console.log($('#den-hien'))
+        $('#den-hien')[0].checked= !!(msg.message - 0)
     });
 });
 
