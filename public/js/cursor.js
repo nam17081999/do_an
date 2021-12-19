@@ -4,11 +4,14 @@ $(function() {
         console.log("1")
     });
     socket.on('sensor', (msg) => {
+        document.getElementById("cambien").innerHTML =  msg.message;
         console.log(msg)
     });
-    // socket.on('sensor', (msg) => {
-    //     document.getElementById("cambien").innerHTML = msg;
-    // });
+    function ten() {
+        socket.emit('arduino', {})
+        console.log("nhan")
+    }
+    $('#ten').on("click",ten)
 });
 
 // Jav
