@@ -21,7 +21,7 @@ svg {
 }
 
 
-/*button */
+/* button */
 
 .switch {
     position: relative;
@@ -97,6 +97,10 @@ body {
     justify-content: space-between;
     background-color: white;
     min-height: 100%;
+    max-width: 1500px;
+    margin: 5vh auto;
+    border-radius: 25px;
+    box-shadow: #999999 0px 0px 5px 1px;
 }
 
 .header {
@@ -129,6 +133,7 @@ a {
 
 .header .col>a {
     display: flex;
+    margin-left: 15px;
 }
 
 .oclock {
@@ -175,10 +180,11 @@ a {
     background-color: #e4e9ff;
     flex: 60%;
     box-shadow: 10px -6px 6px -8px #999999 inset;
+    width: 1170px;
 }
 
 .main-container {
-    margin: 50px 20px;
+    margin: 50px 30px;
     height: 100%;
 }
 
@@ -266,30 +272,6 @@ a {
     background-color: #ffebd2
 }
 
-@media (max-width: 470px) {
-    .item-4 {
-        display: none;
-    }
-}
-
-@media (max-width: 570px) {
-    .item-5 {
-        display: none;
-    }
-}
-
-@media (max-width: 670px) {
-    .item-6 {
-        display: none;
-    }
-}
-
-@media (max-width: 770px) {
-    .item-7 {
-        display: none;
-    }
-}
-
 
 /*Ngữ Cảnh */
 
@@ -303,7 +285,7 @@ a {
 .son-ngu-canh {
     border-radius: 25px;
     box-shadow: #999999 0px 0px 5px 1px;
-    min-width: 210px;
+    min-width: 200px;
     min-height: 130px;
     display: flex;
     align-items: center;
@@ -312,13 +294,13 @@ a {
 }
 
 .mini-container {
-    max-width: 210px;
+    max-width: 200px;
     min-height: 130px;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     justify-content: space-around;
-    width: 80%;
+    width: 75%;
 }
 
 .chau-ngu-canh {
@@ -341,20 +323,27 @@ a {
 
 .ve-nha {
     background-color: #c0efe7;
+    /* background-color: #bfd5fe; */
 }
 
 .nau-com {
     background-color: #d7caf8;
+    /* background-color: #bfd5fe; */
+}
+
+.di-ngu {
+    background-color: #bfd5fe;
 }
 
 .roi-khoi-nha {
     background-color: #ffebd2;
+    /* background-color: #bfd5fe; */
 }
 
 .footer {
-    flex: 25%;
+    flex: 20%;
     box-shadow: 10px -6px 6px -8px #999999 inset;
-    /* display: none; */
+    width: 100px;
 }
 
 .footer .container {
@@ -371,14 +360,14 @@ a {
 
 .diveces-mod {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
 }
 
 .son-dv {
-    flex: 35%;
+    flex: 1;
     margin-top: 15px;
     display: flex;
     justify-content: space-between;
@@ -392,27 +381,31 @@ a {
 }
 
 .son-dv label {
-    margin-right: 10px;
+    margin-right: 20px;
+}
+
+.son-dv div {
+    margin-left: 20px;
 }
 
 .son-dv p {
     margin-top: 10px;
-    font-size: 15px;
+    /* font-size: 15px; */
 }
 
-.water-heater {
+.den_ngu {
     background-color: #ffebd2;
 }
 
-.router {
+.nuoc_nong {
     background-color: #c0efe7;
 }
 
-.porch-light {
+.den_khach {
     background-color: #d7caf8;
 }
 
-.exhaust-fan {
+.hut_mui {
     background-color: #bfd5fe;
 }
 
