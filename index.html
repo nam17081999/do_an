@@ -21,29 +21,32 @@
     <div class="big-container">
         <div class="header">
             <div class="top-bar">
-                <div class="row">
-                    <div class="col smh">
+                <div class="row wrapper">
+                    <div class="col smh ">
                         <h2>Smart Home</h2>
                     </div>
-                    <div class="col">
-                        <a href=""><i class="fas fa-home"></i><p>Trang Chủ</p>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href=""><i class="fas fa-play-circle"></i></i><p>Điều Khiển</p></a>
-                    </div>
-                    <div class="col">
-                        <a href=""><i class="fas fa-cog"></i><p>
 
-                        Cài Đặt</p></a>
+                    <div class="col nav">
+                        <button class="tab-button active" data-id="trang_chu"><i class="fas fa-home"></i>Trang Chủ
+                            </button>
                     </div>
-                    <div class="col">
-                        <a href=""><i class="fas fa-info-circle"></i><p>
+                    <div class="col nav">
+                        <button class="tab-button" data-id="dieu_khien"><i class="fas fa-play-circle"></i>Điều Khiển</button>
 
-                        Thông Tin</p></a>
-                        <p id="cambien"></p>
-                        <button id="ten">nut bam</button>
                     </div>
+                    <div class="col nav">
+                        <button class="tab-button" data-id="cai_dat"><i class="fas fa-cog"></i>
+
+                        Cài Đặt</button>
+                    </div>
+                    <div class="col nav">
+                        <button class="tab-button" data-id="thong_tin"><i class="fas fa-info-circle"></i>
+
+                          Thông Tin</button>
+                        <!-- <p id="cambien"></p>
+                        <button id="ten">nut bam</button> -->
+                    </div>
+
                     <div class="col fb">
                         <div class="none">
                             <div class="son-fb">
@@ -58,9 +61,8 @@
                 </div>
             </div>
         </div>
-
         <div class="main">
-            <div class="main-container">
+            <div class="main-container content active " id="trang_chu">
                 <div class="row">
                     <div class="col">
                         <div class="son-footer-container">
@@ -189,70 +191,66 @@
                     <div class="col">
                         <h3>Ngữ Cảnh</h3>
                         <div class="ngucanh">
-                            <div class="ve-nha son-ngu-canh">
+                            <button class="ve-nha son-ngu-canh">
                                 <div class="mini-container">
                                     <div class="chau-ngu-canh">
                                         <i class="fas fa-bookmark"></i>
-                                        <label class="switch">
-                                        <input type="checkbox" checked>
-                                        <span class="slider round"></span>
-                                      </label>
+
+                                        </label>
                                     </div>
                                     <div class="tt-ngu-canh">
                                         <p>Về Nhà</p>
                                         <p class="real-tt-ngu-canh">Mở Cổng <br>Bật Đèn Phòng Khách</p>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="nau-com son-ngu-canh">
+                            </button>
+
+                            <button class="nau-com son-ngu-canh">
                                 <div class="mini-container">
                                     <div class="chau-ngu-canh">
                                         <i class="fas fa-bookmark"></i>
-                                        <label class="switch">
-                                        <input type="checkbox" checked>
-                                        <span class="slider round"></span>
-                                      </label>
                                     </div>
                                     <div class="tt-ngu-canh">
                                         <p>Nấu Cơm</p>
                                         <p class="real-tt-ngu-canh">Bật Đèn Phòng Bếp <br> Bật Quạt Hút Mùi</p>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="di-ngu son-ngu-canh">
+                            </button>
+                            <button class="di-ngu son-ngu-canh">
                                 <div class="mini-container">
                                     <div class="chau-ngu-canh">
                                         <i class="fas fa-bookmark"></i>
-                                        <label class="switch">
-                                        <input type="checkbox" checked>
-                                        <span class="slider round"></span>
-                                      </label>
                                     </div>
                                     <div class="tt-ngu-canh">
                                         <p>Đi Ngủ</p>
                                         <p class="real-tt-ngu-canh">Tắt Các Thiết Bị <br> Quạt Ngủ Auto</p>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="roi-khoi-nha son-ngu-canh">
+                            </button>
+                            <button class="roi-khoi-nha son-ngu-canh">
                                 <div class="mini-container">
                                     <div class="chau-ngu-canh">
                                         <i class="fas fa-bookmark"></i>
-                                        <label class="switch">
-                                        <input type="checkbox" checked>
-                                        <span class="slider round"></span>
-                                      </label>
+
                                     </div>
                                     <div class="tt-ngu-canh">
                                         <p>Rời Khỏi Nhà</p>
                                         <p class="real-tt-ngu-canh">Tắt Các Thiết Bị<br>Mở Cổng</p>
                                     </div>
                                 </div>
-                            </div>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="content main-container" id="dieu_khien">
+
+
+            </div>
+            <div class="content main-container" id="cai_dat">cai dat</div>
+            <div class="content main-container" id="thong_tin">thong tin</div>
+
         </div>
 
         <div class="footer">

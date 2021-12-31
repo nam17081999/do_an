@@ -4,17 +4,18 @@ $(function() {
         console.log("connected")
     });
     socket.on('sensor', (msg) => {
-        document.getElementById("cambien").innerHTML =  msg.message;
+        document.getElementById("cambien").innerHTML = msg.message;
         console.log(msg)
     });
+
     function ten(e) {
         socket.emit('arduino', {})
         console.log("nhan")
     }
-    $('#den-hien').on("change",ten)
+    $('#den-hien').on("change", ten)
     socket.on('led', (msg) => {
         console.log($('#den-hien'))
-        $('#den-hien')[0].checked= !!(msg.message - 0)
+        $('#den-hien')[0].checked = !!(msg.message - 0)
     });
 });
 
@@ -64,3 +65,23 @@ function showCalendar(data) {
         ).innerHTML = `<div><span class="weather-label">UV: </span>${data[index].uvi}</div>`;
     });
 }
+
+const tabs = document.querySelector(".wrapper");
+const tabButton = document.querySelectorAll(".tab-button");
+const contents = document.querySelectorAll(".content");
+
+tabs.onclick = (e) => {
+    const id = e.target.dataset.id;
+    if (id) {
+        tabButton.forEach((btn) => {
+            btn.classList.remove("active");
+        });
+        e.target.classList.add("active");
+
+        contents.forEach((content) => {
+            content.classList.remove("active");
+        });
+        const element = document.getElementById(id);
+        element.classList.add("active");
+    }
+};
