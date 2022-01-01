@@ -8,6 +8,7 @@ button {
     font-family: 'Signika', sans-serif;
     font-size: 18px;
     color: #333333;
+    cursor: pointer;
 }
 
 a {
@@ -46,7 +47,6 @@ html {
 
 .slider {
     position: absolute;
-    cursor: pointer;
     top: 0;
     left: 0;
     right: 0;
@@ -140,13 +140,12 @@ a {
 }
 
 .nav button {
-    margin-left: 20px;
+    margin-left: 15px;
 }
 
 .header button {
     border: none;
     padding: 10px;
-    cursor: pointer;
     background-color: white;
 }
 
@@ -414,7 +413,6 @@ a {
     box-shadow: #999999 0px 0px 5px 1px;
     border: none;
     padding: 50px;
-    cursor: pointer;
     background-color: #b0def0;
     font-size: 20px;
 }
@@ -467,7 +465,7 @@ a {
 }
 
 .row2 button.active {
-    background-color: skyblue;
+    background-color: #d7caf8;
 }
 
 .footer {
