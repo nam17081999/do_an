@@ -48,11 +48,10 @@ function showCalendar(data) {
     arrDom.forEach((item, index) => {
         item.querySelector(
             ".accordion-button"
-        ).innerHTML = `<img src="http://openweathermap.org/img/wn/${
-        data[index].weather[0].icon}@2x.png"  alt="${data[index].weather[0].main}">${new Date(
-        timeCurrent + index * 86400000
-      ).toLocaleDateString("vi", options)
-      }</span>`;
+        ).innerHTML = `<img src="http://openweathermap.org/img/wn/${data[index].weather[0].icon}@2x.png"  alt="${data[index].weather[0].main}">${new Date(
+            timeCurrent + index * 86400000
+        ).toLocaleDateString("vi", options)
+            }</span>`;
         item.querySelector(
             ".temp"
         ).innerHTML = `<div><span class="weather-label">Max: </span>${data[index].temp.max}°C</div>
@@ -71,6 +70,7 @@ const tabButton = document.querySelectorAll(".tab-button");
 const contents = document.querySelectorAll(".content");
 
 tabs.onclick = (e) => {
+    console.log(e.target)
     const id = e.target.dataset.id;
     if (id) {
         tabButton.forEach((btn) => {
@@ -79,6 +79,27 @@ tabs.onclick = (e) => {
         e.target.classList.add("active");
 
         contents.forEach((content) => {
+            content.classList.remove("active");
+        });
+        const element = document.getElementById(id);
+        element.classList.add("active");
+    }
+};
+
+const tabs2 = document.querySelector(".wrapper2");
+const tabButton2 = document.querySelectorAll(".tab-button2");
+const contents2 = document.querySelectorAll(".content2");
+
+tabs2.onclick = (e) => {
+    console.log(e.target)
+    const id = e.target.dataset.id;
+    if (id) {
+        tabButton2.forEach((btn) => {
+            btn.classList.remove("active");
+        });
+        e.target.classList.add("active");
+
+        contents2.forEach((content) => {
             content.classList.remove("active");
         });
         const element = document.getElementById(id);

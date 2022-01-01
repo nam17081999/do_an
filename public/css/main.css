@@ -15,10 +15,11 @@ a {
 }
 
 .fas,
-.far {
+.far,
+.fab {
     color: #444444;
     font-size: 20px;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 html {
@@ -188,6 +189,22 @@ a {
     width: 950px;
 }
 
+.content {
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
+
+.content2 {
+    display: none;
+}
+
+.content2.active {
+    display: block;
+}
+
 .main-container {
     margin: 50px 30px;
     height: 100%;
@@ -249,7 +266,8 @@ a {
     margin-bottom: 10px;
 }
 
-.item-1 {
+
+/* .item-1 {
     background-color: #ffebd2
 }
 
@@ -275,6 +293,16 @@ a {
 
 .item-7 {
     background-color: #ffebd2
+} */
+
+.item-1,
+.item-2,
+.item-3,
+.item-4,
+.item-5,
+.item-6,
+.item-7 {
+    background-color: #b0def0;
 }
 
 
@@ -329,7 +357,7 @@ a {
 
 .ve-nha {
     background-color: #c0efe7;
-    /* background-color: #bfd5fe; */
+    /* background-color: ##b0def0; */
 }
 
 .nau-com {
@@ -351,6 +379,95 @@ a {
     /* padding: 10px;
     cursor: pointer;
     background-color: white; */
+}
+
+
+/* dieukhien
+. 
+. 
+.  */
+
+.dieu_khien_phong {
+    font-size: 20px;
+}
+
+.wrapper2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.fl25 {
+    flex: 25%;
+    margin: auto auto;
+}
+
+.fl40 {
+    flex: 40%;
+    margin: 10px 20px;
+}
+
+.wrapper2 .tab-button2 {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: #999999 0px 0px 5px 1px;
+    border: none;
+    padding: 50px;
+    cursor: pointer;
+    background-color: #b0def0;
+    font-size: 20px;
+}
+
+.content2 {
+    margin-top: 20px;
+}
+
+.son_dieu_khien {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    /* margin-top: 20px; */
+}
+
+.tab-ngu-canh {
+    flex: 45%;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: #999999 0px 0px 5px 1px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.tab-ngu-canh>* {
+    margin: 5px 40px;
+    height: 100%;
+}
+
+.mgl {
+    margin-left: 30px;
+}
+
+.nam_switch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.son_nam_sw {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: space-around;
+}
+
+.row2 button.active {
+    background-color: skyblue;
 }
 
 .footer {
@@ -447,12 +564,4 @@ a {
     width: 60px;
     height: 60px;
     border-radius: 45px;
-}
-
-.content {
-    display: none;
-}
-
-.content.active {
-    display: block;
 }

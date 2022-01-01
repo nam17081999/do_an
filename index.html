@@ -28,21 +28,22 @@
 
                     <div class="col nav">
                         <button class="tab-button active" data-id="trang_chu"><i class="fas fa-home"></i>Trang Chủ
-                            </button>
+                        </button>
                     </div>
                     <div class="col nav">
-                        <button class="tab-button" data-id="dieu_khien"><i class="fas fa-play-circle"></i>Điều Khiển</button>
+                        <button class="tab-button" data-id="dieu_khien"><i class="fas fa-play-circle"></i>Điều
+                            Khiển</button>
 
                     </div>
                     <div class="col nav">
                         <button class="tab-button" data-id="cai_dat"><i class="fas fa-cog"></i>
 
-                        Cài Đặt</button>
+                            Cài Đặt</button>
                     </div>
                     <div class="col nav">
                         <button class="tab-button" data-id="thong_tin"><i class="fas fa-info-circle"></i>
 
-                          Thông Tin</button>
+                            Thông Tin</button>
                         <!-- <p id="cambien"></p>
                         <button id="ten">nut bam</button> -->
                     </div>
@@ -245,9 +246,227 @@
             </div>
 
             <div class="content main-container" id="dieu_khien">
+                <h3>Danh Sách Phòng</h3>
+                <div class="row2">
+                    <div class="wrapper2">
+                        <div class="col2 fl25">
+                            <button class="tab-button2 b-cong " data-id="tab_cong"> <i
+                                    class="fas fa-dungeon"></i>Cổng </button>
+                        </div>
+                        <div class="col2 fl40">
+                            <button class="tab-button2 " data-id="tab_pn"><i class="fas fa-bed"></i>Phòng Ngủ</button>
+                        </div>
+                        <div class="col2 fl25">
+                            <button class="tab-button2 b-tam" data-id="tab_tam"><i class="fas fa-bath"></i>Phòng
+                                Tắm</button>
+                        </div>
+                        <div class="col2 fl25">
+                            <button class="tab-button2 b-nc" data-id="tab_nc"><i class="fas fa-bookmark"></i>Ngữ
+                                Cảnh</button>
+                        </div>
+                        <div class="col2 fl40">
+                            <button class="tab-button2 active " data-id="tab_pk"><i class="fas fa-couch"></i>Phòng
+                                Khách</button>
+                        </div>
+                        <div class="col2 fl25">
+                            <button class="tab-button2 b-bep" data-id="tab_bep"><i class="fab fa-hotjar"></i>Phòng
+                                Bếp</button>
+                        </div>
+                    </div>
+                </div>
+                <h3>Điều Khiển</h3>
+                <div class="row2">
+                    <div class="dieu_khien_phong">
+                        <div class="dieu_khien_cong">
+                            <div class="content2 " id="tab_cong">
+                                <div class="son_dieu_khien">
+                                    <div class="tab-ngu-canh">
+                                        <label for="cong">
+                                        <div class="nam_switch ">
+                                            <div class="son_nam_sw">
+                                                <i class="fas fa-dungeon"></i>
+                                                <p>Cổng</p>
+                                            </div>
+                                            <label class="switch">
+                                                <input id="cong" type="checkbox">
+                                                <span class="slider round"></span>
+                                        </div>
+    
+                                    </label>
+                                    </div>
 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dieu_khien_pn">
+                            <div class="content2 " id="tab_pn">
+                                <div class="son_dieu_khien">
+                                    <div class="tab-ngu-canh">
+                                        <label for="den_ngu">
+                                        <div class="nam_switch ">
+                                            <div class="son_nam_sw">
+                                                <i class="fas fa-lightbulb"></i>
+                                                <p>Đèn Phòng Ngủ</p>
+                                            </div>
+                                            <label class="switch">
+                                                <input id="den_ngu" type="checkbox">
+                                                <span class="slider round"></span>
+                                        </div>
+    
+                                    </label>
+                                    </div>
+                                    <div class="tab-ngu-canh mgl">
+                                        <label for="quat_ngu">
+                                        <div class="nam_switch">
+                                            <div class="son_nam_sw">
+                                                <i class="fas fa-fan"></i>
+                                                <p>Quạt Phòng Ngủ</p>
+                                            </div>
+                                            <label class="switch">
+                                                <input id="quat_ngu" type="checkbox">
+                                                <span class="slider round"></span>
+                                        </div>
+    
+                                    </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dieu_khien_tam">
+                            <div class="content2" id="tab_tam">
+                                <div class="son_dieu_khien">
+                                    <div class="tab-ngu-canh">
+                                        <label for="nuoc_nong">
+                                        <div class="nam_switch ">
+                                            <div class="son_nam_sw">
+                                                <i class="fas fa-shower"></i>
+                                                <p>Nước Nóng</p>
+                                            </div>
+                                            <label class="switch">
+                                                <input id="nuoc_nong" type="checkbox">
+                                                <span class="slider round"></span>
+                                        </div>
+    
+                                    </label>
+                                    </div>
 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dieu_khien_nc">
+                            <div class="content2 " id="tab_nc">
+                                <div class="son_dieu_khien">
+                                    <button class="tab-ngu-canh">
+
+                                        <div class="chau-ngu-canh">
+                                            <i class="fas fa-bookmark"></i>
+
+                                            </label>
+                                        </div>
+                                        <div class="tt-ngu-canh">
+                                            <p>Về Nhà</p>
+                                            <p class="real-tt-ngu-canh">Mở Cổng Và Bật Đèn Phòng Khách</p>
+                                        </div>
+
+                                    </button>
+
+                                    <button class="tab-ngu-canh mgl">
+
+                                        <div class="chau-ngu-canh">
+                                            <i class="fas fa-bookmark"></i>
+                                        </div>
+                                        <div class="tt-ngu-canh">
+                                            <p>Nấu Cơm</p>
+                                            <p class="real-tt-ngu-canh">Bật Đèn Phòng Bếp Và Bật Quạt Hút Mùi</p>
+
+                                        </div>
+                                    </button>
+                                    <button class="tab-ngu-canh">
+
+                                        <div class="chau-ngu-canh">
+                                            <i class="fas fa-bookmark"></i>
+                                        </div>
+                                        <div class="tt-ngu-canh">
+                                            <p>Đi Ngủ</p>
+                                            <p class="real-tt-ngu-canh">Tắt Các Thiết Bị Không Sử Dụng Và Quạt Ngủ Auto</p>
+                                        </div>
+
+                                    </button>
+                                    <button class="tab-ngu-canh mgl">
+
+                                        <div class="chau-ngu-canh">
+                                            <i class="fas fa-bookmark"></i>
+
+                                        </div>
+                                        <div class="tt-ngu-canh">
+                                            <p>Rời Khỏi Nhà</p>
+                                            <p class="real-tt-ngu-canh">Tắt Các Thiết Bị Không Sử Dụng Và Mở Cổng</p>
+                                        </div>
+
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dieu_khien_pk">
+                            <div class="content2 active " id="tab_pk">
+                                <div class="son_dieu_khien">
+                                    <div class="tab-ngu-canh">
+                                        <label for="den_khach">
+                                        <div class="nam_switch ">
+                                            <div class="son_nam_sw">
+                                                <i class="fas fa-lightbulb"></i>
+                                                <p>Đèn Phòng Khách</p>
+                                            </div>
+                                            <label class="switch">
+                                                <input id="den_khach" type="checkbox">
+                                                <span class="slider round"></span>
+                                        </div>
+    
+                                    </label>
+                                    </div>
+                                    <div class="tab-ngu-canh mgl">
+                                        <label for="quat_khach">
+                                        <div class="nam_switch">
+                                            <div class="son_nam_sw">
+                                                <i class="fas fa-fan"></i>
+                                                <p>Quạt Phòng Khách</p>
+                                            </div>
+                                            <label class="switch">
+                                                <input id="quat_khach" type="checkbox">
+                                                <span class="slider round"></span>
+                                        </div>
+    
+                                    </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dieu_khien_bep">
+                            <div class="content2 " id="tab_bep">
+                                <div class="son_dieu_khien">
+
+                                    <div class="tab-ngu-canh">
+                                        <label for="hut_mui">
+                                        <div class="nam_switch">
+                                            <div class="son_nam_sw">
+                                                <i class="fas fa-fan"></i>
+                                                <p>Quạt Hút Mùi</p>
+                                            </div>
+                                            <label class="switch">
+                                                <input id="hut_mui" type="checkbox">
+                                                <span class="slider round"></span>
+                                        </div>
+    
+                                    </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
             <div class="content main-container" id="cai_dat">cai dat</div>
             <div class="content main-container" id="thong_tin">thong tin</div>
 
@@ -260,48 +479,52 @@
                         <h3>Thường Sử Dụng</h3>
                         <div class="usually-used">
                             <div class="diveces-mod">
-                                <label for="cong"><div class="cong son-dv">
-                                    <div>
-                                        <i class="fas fa-dungeon"></i>
-                                        <p>Cổng</p>
-                                    </div>
-                                    <label class="switch">
-                                    <input id="cong" type="checkbox">
-                                    <span class="slider round"></span>
-                                    </div>
-
-                                </label>
-
-                                <label for="nuoc_nong"><div class="nuoc_nong son-dv">
-                                    <div>
-                                        <i class="fas fa-shower"></i>
-                                        <p>Nước Nóng</p>
-                                    </div>
-                                    <label class="switch">
-                                    <input id="nuoc_nong" type="checkbox">
-                                    <span class="slider round"></span>
+                                <label for="cong">
+                                    <div class="cong son-dv">
+                                        <div>
+                                            <i class="fas fa-dungeon"></i>
+                                            <p>Cổng</p>
+                                        </div>
+                                        <label class="switch">
+                                            <input id="cong" type="checkbox">
+                                            <span class="slider round"></span>
                                     </div>
 
                                 </label>
-                                <label for="den_khach"><div class="den_khach son-dv">
-                                    <div>
-                                        <i class="fas fa-lightbulb"></i>
-                                        <p>Đèn Phòng Khách</p>
-                                    </div>
-                                    <label class="switch">
-                                    <input id="den_khach" type="checkbox">
-                                    <span class="slider round"></span>
+
+                                <label for="nuoc_nong">
+                                    <div class="nuoc_nong son-dv">
+                                        <div>
+                                            <i class="fas fa-shower"></i>
+                                            <p>Nước Nóng</p>
+                                        </div>
+                                        <label class="switch">
+                                            <input id="nuoc_nong" type="checkbox">
+                                            <span class="slider round"></span>
                                     </div>
 
                                 </label>
-                                <label for="hut_mui"><div class="hut_mui son-dv">
-                                    <div>
-                                        <i class="fas fa-fan"></i>
-                                        <p>Hút Mùi</p>
+                                <label for="den_khach">
+                                    <div class="den_khach son-dv">
+                                        <div>
+                                            <i class="fas fa-lightbulb"></i>
+                                            <p>Đèn Phòng Khách</p>
+                                        </div>
+                                        <label class="switch">
+                                            <input id="den_khach" type="checkbox">
+                                            <span class="slider round"></span>
                                     </div>
-                                    <label class="switch">
-                                    <input id="hut_mui" type="checkbox">
-                                    <span class="slider round"></span>
+
+                                </label>
+                                <label for="hut_mui">
+                                    <div class="hut_mui son-dv">
+                                        <div>
+                                            <i class="fas fa-fan"></i>
+                                            <p>Hút Mùi</p>
+                                        </div>
+                                        <label class="switch">
+                                            <input id="hut_mui" type="checkbox">
+                                            <span class="slider round"></span>
                                     </div>
 
                                 </label>
@@ -314,11 +537,14 @@
                         <h3>Thành Viên</h3>
                         <div class="members">
                             <div class="son-members">
-                                <a href=""><img src="/public/media/admin.png" alt="admin"></a><a href="">Admin</a></div>
+                                <a href=""><img src="/public/media/admin.png" alt="admin"></a><a href="">Admin</a>
+                            </div>
                             <div class="son-members">
-                                <a href=""><img src="/public/media/people-1.png" alt="peo1"></a><a href="">Bác</a></div>
+                                <a href=""><img src="/public/media/people-1.png" alt="peo1"></a><a href="">Bác</a>
+                            </div>
                             <div class="son-members">
-                                <a href=""><img src="/public/media/people-2.png" alt="peo2"></a><a href="">Con Gái</a></div>
+                                <a href=""><img src="/public/media/people-2.png" alt="peo2"></a><a href="">Con Gái</a>
+                            </div>
                         </div>
                     </div>
 
