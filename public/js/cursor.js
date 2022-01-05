@@ -12,10 +12,10 @@ $(function() {
         socket.emit('arduino', {})
         console.log("nhan")
     }
-    $('#den-hien').on("change", ten)
+    $('#den_khach').on("change", ten)
     socket.on('led', (msg) => {
-        console.log($('#den-hien'))
-        $('#den-hien')[0].checked = !!(msg.message - 0)
+        console.log($('#den_khach'))
+        $('#den_khach')[0].checked = !!(msg.message - 0)
     });
 });
 
