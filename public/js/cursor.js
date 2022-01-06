@@ -13,7 +13,7 @@ $(function() {
         console.log("nhan")
     }
     $('#den_khach').on("change", ten)
-    socket.on('led', (msg) => {
+    socket.on('den_khach', (msg) => {
         console.log($('#den_khach'))
         $('#den_khach')[0].checked = !!(msg.message - 0)
     });
@@ -70,7 +70,7 @@ const tabButton = document.querySelectorAll(".tab-button");
 const contents = document.querySelectorAll(".content");
 
 tabs.onclick = (e) => {
-    console.log(e.target)
+    // console.log(e.target)
     const id = e.target.dataset.id;
     if (id) {
         tabButton.forEach((btn) => {
@@ -91,7 +91,7 @@ const tabButton2 = document.querySelectorAll(".tab-button2");
 const contents2 = document.querySelectorAll(".content2");
 
 tabs2.onclick = (e) => {
-    console.log(e.target)
+    // console.log(e.target)
     const id = e.target.dataset.id;
     if (id) {
         tabButton2.forEach((btn) => {
