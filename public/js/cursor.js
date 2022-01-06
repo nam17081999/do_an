@@ -10,6 +10,7 @@ $(function() {
     socket.on('nd_khach', (msg) => {
         document.getElementById("nd_khach").innerHTML = msg.message;
         console.log(msg)
+        console.log("1")
     });
 
     function ten(e) {
