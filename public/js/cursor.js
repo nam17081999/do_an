@@ -7,6 +7,10 @@ $(function() {
         document.getElementById("cambien").innerHTML = msg.message;
         console.log(msg)
     });
+    socket.on('nd_khach', (msg) => {
+        document.getElementById("nd_khach").innerHTML = msg.message;
+        console.log(msg)
+    });
 
     function ten(e) {
         socket.emit('arduino', {})

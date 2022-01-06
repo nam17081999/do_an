@@ -23,6 +23,9 @@ io.on("connection", (socket) => {
   socket.on("sensor", (msg) => {
     socket.broadcast.emit("sensor", msg);
   });
+  socket.on("nd_khach", (msg) => {
+    socket.broadcast.emit("nd_khach", msg);
+  });
   socket.on("led", (msg) => {
     socket.broadcast.emit("led", msg);
   });
