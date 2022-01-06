@@ -24,7 +24,8 @@ io.on("connection", (socket) => {
     socket.broadcast.emit("sensor", msg);
   });
   socket.on("nd_khach", (msg) => {
-    socket.broadcast.emit("nd_khach", msg);
+    console.log(msg)
+    io.emit("nd_khach", msg);
   });
   socket.on("led", (msg) => {
     socket.broadcast.emit("led", msg);
@@ -37,3 +38,4 @@ io.on("connection", (socket) => {
   });
 });
 http.listen(process.env.PORT || 3001, () => {});
+

@@ -5,12 +5,12 @@ $(function() {
     });
     socket.on('sensor', (msg) => {
         document.getElementById("cambien").innerHTML = msg.message;
-        console.log(msg)
     });
     socket.on('nd_khach', (msg) => {
         document.getElementById("nd_khach").innerHTML = msg.message;
-        console.log(msg)
-        console.log("1")
+        let data = msg.message.split(",")
+        console.log(data[0])
+        console.log(data[1])
     });
 
     function ten(e) {
@@ -111,3 +111,4 @@ tabs2.onclick = (e) => {
         element.classList.add("active");
     }
 };
+
