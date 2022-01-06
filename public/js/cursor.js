@@ -1,5 +1,5 @@
 $(function() {
-    var socket = io("https://namtuoc.herokuapp.com/")
+    var socket = io("https://namtuoc.herokuapp.com")
     socket.on('connected', (msg) => {
         console.log("connected")
     });
