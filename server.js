@@ -27,6 +27,10 @@ io.on("connection", (socket) => {
     console.log(msg)
     io.emit("nd_khach", msg);
   });
+  socket.on("nd_ngu", (msg) => {
+    console.log(msg)
+    io.emit("nd_ngu", msg);
+  });
   socket.on("led", (msg) => {
     socket.broadcast.emit("led", msg);
   });

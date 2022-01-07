@@ -12,6 +12,12 @@ $(function() {
         console.log(data[0])
         console.log(data[1])
     });
+    socket.on('nd_ngu', (msg) => {
+        document.getElementById("nd_ngu").innerHTML = msg.message;
+        let data = msg.message.split(",")
+        console.log(data[0])
+        console.log(data[1])
+    });
 
     function ten(e) {
         socket.emit('arduino', {})
