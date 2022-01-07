@@ -27,11 +27,15 @@ io.on("connection", (socket) => {
     console.log(msg)
     io.emit("nd_khach", msg);
   });
+  
   socket.on("led", (msg) => {
     socket.broadcast.emit("led", msg);
   });
   socket.on("den_khach", (msg) => {
     socket.broadcast.emit("den_khach", msg);
+  });
+  socket.on("quat_khach", (msg) => {
+    socket.broadcast.emit("quat_khach", msg);
   });
   socket.on("arduino", function (data) {
     io.sockets.emit('atime', { time: new Date().toJSON() });
