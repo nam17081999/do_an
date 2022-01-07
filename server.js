@@ -27,7 +27,6 @@ io.on("connection", (socket) => {
     console.log(msg)
     io.emit("nd_khach", msg);
   });
-  
   socket.on("led", (msg) => {
     socket.broadcast.emit("led", msg);
   });
@@ -36,6 +35,9 @@ io.on("connection", (socket) => {
   });
   socket.on("quat_khach", (msg) => {
     socket.broadcast.emit("quat_khach", msg);
+  });
+  socket.on("hut_mui", (msg) => {
+    socket.broadcast.emit("hut_mui", msg);
   });
   socket.on("arduino", function (data) {
     io.sockets.emit('atime', { time: new Date().toJSON() });

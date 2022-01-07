@@ -27,6 +27,11 @@ $(function() {
         console.log($('#quat_khach'))
         $('#quat_khach')[0].checked = !!(msg.message - 0)
     });
+    $('#hut_mui').on("change", ten)
+    socket.on('hut_mui', (msg) => {
+        console.log($('#hut_mui'))
+        $('#hut_mui')[0].checked = !!(msg.message - 0)
+    });
 });
 
 // Jav
