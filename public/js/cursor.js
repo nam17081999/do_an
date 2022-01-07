@@ -22,6 +22,11 @@ $(function() {
         console.log($('#den_khach'))
         $('#den_khach')[0].checked = !!(msg.message - 0)
     });
+    $('#quat_khach').on("change", ten)
+    socket.on('quat_khach', (msg) => {
+        console.log($('#quat_khach'))
+        $('#quat_khach')[0].checked = !!(msg.message - 0)
+    });
 });
 
 // Jav
