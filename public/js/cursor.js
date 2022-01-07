@@ -11,6 +11,7 @@ $(function() {
         let data = msg.message.split(",")
         console.log(data[0])
         console.log(data[1])
+        document.getElementById("da_khach").innerHTML = data[1];
     });
     socket.on('nd_ngu', (msg) => {
         document.getElementById("nd_ngu").innerHTML = msg.message;
