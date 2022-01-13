@@ -58,6 +58,7 @@ io.on("connection", (socket) => {
   socket.on("arduino", function (data) {
     io.sockets.emit('atime', { time: new Date().toJSON() });
   });
+  
 });
 http.listen(process.env.PORT || 3001, () => {});
 

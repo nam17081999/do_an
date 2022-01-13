@@ -27,17 +27,38 @@ $(function() {
         socket.emit('arduino', {})
         console.log("nhan")
     }
-    $('#den_khach').on("change", ten)
+    function denkhach(e) {
+        socket.emit('den_khach', {})
+        console.log("nhan_den_khach")
+    }
+    function quatkhach(e) {
+        socket.emit('quat_khach', {})
+        console.log("nhan_den_khach")
+    }
+    function hutmui(e) {
+        socket.emit('hut_mui', {})
+        console.log("nhan_den_khach")
+    }
+    // function denkhach(e) {
+    //     socket.emit('den_khach', {})
+    //     console.log("nhan_den_khach")
+    // }
+    // function denkhach(e) {
+    //     socket.emit('den_khach', {})
+    //     console.log("nhan_den_khach")
+    // }
+
+    $('#den_khach').on("change", denkhach)
     socket.on('den_khach', (msg) => {
         console.log($('#den_khach'))
         $('#den_khach')[0].checked = !!(msg.message - 0)
     });
-    $('#quat_khach').on("change", ten)
+    $('#quat_khach').on("change", quatkhach)
     socket.on('quat_khach', (msg) => {
         console.log($('#quat_khach'))
         $('#quat_khach')[0].checked = !!(msg.message - 0)
     });
-    $('#hut_mui').on("change", ten)
+    $('#hut_mui').on("change", hutmui)
     socket.on('hut_mui', (msg) => {
         console.log($('#hut_mui'))
         $('#hut_mui')[0].checked = !!(msg.message - 0)
