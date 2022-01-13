@@ -47,6 +47,14 @@ $(function() {
         socket.emit('quat_ngu', {})
         console.log("nhan_den_khach")
     }
+    function cong(e) {
+        socket.emit('cong', {})
+        console.log("nhan_den_khach")
+    }
+    function nuoc_nong(e) {
+        socket.emit('nuoc_nong', {})
+        console.log("nhan_den_khach")
+    }
 
     $('#den_khach').on("change", denkhach)
     socket.on('den_khach', (msg) => {
