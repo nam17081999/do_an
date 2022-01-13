@@ -40,6 +40,18 @@ io.on("connection", (socket) => {
   socket.on("quat_khach", (msg) => {
     socket.broadcast.emit("quat_khach", msg);
   });
+  socket.on("quat_ngu", (msg) => {
+    socket.broadcast.emit("quat_ngu", msg);
+  });
+  socket.on("den_ngu", (msg) => {
+    socket.broadcast.emit("den_ngu", msg);
+  });
+  socket.on("nuoc_nong", (msg) => {
+    socket.broadcast.emit("nuoc_nong", msg);
+  });
+  socket.on("cong", (msg) => {
+    socket.broadcast.emit("cong", msg);
+  });
   socket.on("hut_mui", (msg) => {
     socket.broadcast.emit("hut_mui", msg);
   });

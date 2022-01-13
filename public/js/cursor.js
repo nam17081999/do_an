@@ -15,10 +15,12 @@ $(function() {
         document.getElementById("ndp_khach").innerHTML = data[0];
     });
     socket.on('nd_ngu', (msg) => {
-        document.getElementById("nd_ngu").innerHTML = msg.message;
+        // document.getElementById("nd_ngu").innerHTML = msg.message;
         let data = msg.message.split(",")
         console.log(data[0])
         console.log(data[1])
+        document.getElementById("da_ngu").innerHTML = data[1];
+        document.getElementById("ndp_ngu").innerHTML = data[0];
     });
 
     function ten(e) {
