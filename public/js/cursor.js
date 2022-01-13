@@ -8,11 +8,11 @@ $(function() {
     });
     socket.on('nd_khach', (msg) => {
         // document.getElementById("nd_khach").innerHTML = msg.message;
-        // let data = msg.message.split(",")
+        let data = msg.message.split(",")
         console.log(data[0])
         console.log(data[1])
         document.getElementById("da_khach").innerHTML = data[1];
-        // document.getElementById("ndp_khach").innerHTML = data[0];
+        document.getElementById("ndp_khach").innerHTML = data[0];
     });
     socket.on('nd_ngu', (msg) => {
         document.getElementById("nd_ngu").innerHTML = msg.message;

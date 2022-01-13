@@ -412,7 +412,6 @@ a {
     border-radius: 20px;
     box-shadow: #999999 0px 0px 5px 1px;
     border: none;
-    padding: 50px;
     background-color: #b0def0;
     font-size: 20px;
 }
@@ -429,6 +428,30 @@ a {
     /* margin-top: 20px; */
 }
 
+.bt_pk,
+.bt_pn {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 38px;
+}
+
+.b-cong,
+.b-tam,
+.b-nc,
+.b-bep {
+    padding: 50px;
+}
+
+
+.name_pk {
+    display: flex;
+    justify-content: center;
+    flex:100%;
+}
+
+
 .tab-ngu-canh {
     flex: 45%;
     margin-bottom: 30px;
@@ -439,6 +462,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    background-color: white;
 }
 
 .tab-ngu-canh>* {
