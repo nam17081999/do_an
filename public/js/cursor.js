@@ -48,7 +48,7 @@ $(function() {
     //     console.log("nhan_den_khach")
     // }
 
-    document.querySelector('.den_khach').on("change", denkhach)
+    document.querySelector('.den_khach').on("click", denkhach)
     socket.on('den_khach', (msg) => {
         console.log($('.den_khach'))
         $('.den_khach')[0].checked = !!(msg.message - 0)
