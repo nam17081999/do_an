@@ -1,5 +1,5 @@
 $(function() {
-    var socket = io("namtuoc.herokuapp.com")
+    var socket = io("namtuoc.herokuapp.com/")
     socket.on('connected', (msg) => {
         console.log("connected")
     });
@@ -55,6 +55,25 @@ $(function() {
         socket.emit('nuoc_nong', {})
         console.log("nhan_den_khach")
     }
+    function roi_nha(e) {
+        socket.emit('roi_nha', {})
+        console.log("roinha")
+   
+    }
+    function venha(e) {
+        socket.emit('ve_nha', {})
+        console.log("venha")
+    }
+    function roi_nha1(e) {
+        socket.emit('roi_nha', {})
+        console.log("roinha")
+   
+    }
+    function venha1(e) {
+        socket.emit('ve_nha', {})
+        console.log("venha")
+   
+    }
 
     $('#den_khach').on("change", denkhach)
     socket.on('den_khach', (msg) => {
@@ -90,6 +109,26 @@ $(function() {
     socket.on('cong', (msg) => {
         console.log($('#cong'))
         $('#cong')[0].checked = !!(msg.message - 0)
+    });
+    $('#roi_nha').on("click", roi_nha)
+    socket.on('roi_nha', (msg) => {
+        console.log($('#roi_nha'))
+        $('#roi_nha')[0].checked = !!(msg.message - 0)
+    });
+    $('#ve_nha').on("click", venha)
+    socket.on('ve_nha', (msg) => {
+        console.log($('#ve_nha'))
+        $('#ve_nha')[0].checked = !!(msg.message - 0)
+    });
+    $('#roi_nha1').on("click", roi_nha1)
+    socket.on('roi_nha', (msg) => {
+        console.log($('#roi_nha1'))
+        $('#roi_nha1')[0].checked = !!(msg.message - 0)
+    });
+    $('#ve_nha1').on("click", venha1)
+    socket.on('ve_nha', (msg) => {
+        console.log($('#ve_nha1'))
+        $('#ve_nha1')[0].checked = !!(msg.message - 0)
     });
 });
 

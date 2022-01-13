@@ -266,6 +266,11 @@ a {
 }
 
 
+.thoi_tiet {
+    display: flex;
+}
+
+
 /* .item-1 {
     background-color: #ffebd2
 }
@@ -310,7 +315,7 @@ a {
 .ngucanh {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 

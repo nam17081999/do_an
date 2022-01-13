@@ -19,10 +19,6 @@ app.get("/", (req, res) => {
 });
 
 io.on("connection", (socket) => {
-  io.emit("connected", { msg: "connected" });
-  socket.on("sensor", (msg) => {
-    socket.broadcast.emit("sensor", msg);
-  });
   socket.on("nd_khach", (msg) => {
     console.log(msg)
     io.emit("nd_khach", msg);
@@ -30,9 +26,6 @@ io.on("connection", (socket) => {
   socket.on("nd_ngu", (msg) => {
     console.log(msg)
     io.emit("nd_ngu", msg);
-  });
-  socket.on("led", (msg) => {
-    socket.broadcast.emit("led", msg);
   });
   socket.on("den_khach", (msg) => {
     socket.broadcast.emit("den_khach", msg);
@@ -50,13 +43,16 @@ io.on("connection", (socket) => {
     socket.broadcast.emit("nuoc_nong", msg);
   });
   socket.on("cong", (msg) => {
-    socket.broadcast.emit("cong", msg);
+    socket.broadcast.emit("123456", msg);
   });
   socket.on("hut_mui", (msg) => {
     socket.broadcast.emit("hut_mui", msg);
   });
-  socket.on("arduino", function (data) {
-    io.sockets.emit('atime', { time: new Date().toJSON() });
+  socket.on("roi_nha", (msg) => {
+    socket.broadcast.emit("roi_khoi_nha", msg);
+  });
+  socket.on("ve_nha", (msg) => {
+    socket.broadcast.emit("ve_nha", msg);
   });
   
 });
