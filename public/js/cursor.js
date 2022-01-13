@@ -39,19 +39,19 @@ $(function() {
         socket.emit('hut_mui', {})
         console.log("nhan_den_khach")
     }
-    // function denkhach(e) {
-    //     socket.emit('den_khach', {})
-    //     console.log("nhan_den_khach")
-    // }
-    // function denkhach(e) {
-    //     socket.emit('den_khach', {})
-    //     console.log("nhan_den_khach")
-    // }
+    function denngu(e) {
+        socket.emit('den_ngu', {})
+        console.log("nhan_den_khach")
+    }
+    function quatngu(e) {
+        socket.emit('quat_ngu', {})
+        console.log("nhan_den_khach")
+    }
 
-    document.querySelector('.den_khach').addEventListener("click", denkhach)
+    $('#den_khach').on("change", denkhach)
     socket.on('den_khach', (msg) => {
-        console.log($('.den_khach'))
-        $('.den_khach')[0].checked = !!(msg.message - 0)
+        console.log($('#den_khach'))
+        $('#den_khach')[0].checked = !!(msg.message - 0)
     });
     $('#quat_khach').on("change", quatkhach)
     socket.on('quat_khach', (msg) => {
@@ -62,6 +62,26 @@ $(function() {
     socket.on('hut_mui', (msg) => {
         console.log($('#hut_mui'))
         $('#hut_mui')[0].checked = !!(msg.message - 0)
+    });
+    $('#den_ngu').on("change", denngu)
+    socket.on('den_ngu', (msg) => {
+        console.log($('#den_ngu'))
+        $('#den_ngu')[0].checked = !!(msg.message - 0)
+    });
+    $('#quat_ngu').on("change", quatngu)
+    socket.on('quat_ngu', (msg) => {
+        console.log($('#quat_ngu'))
+        $('#quat_ngu')[0].checked = !!(msg.message - 0)
+    });
+    $('#nuoc_nong').on("change", nuoc_nong)
+    socket.on('nuoc_nong', (msg) => {
+        console.log($('#nuoc_nong'))
+        $('#nuoc_nong')[0].checked = !!(msg.message - 0)
+    });
+    $('#cong').on("change", cong)
+    socket.on('cong', (msg) => {
+        console.log($('#cong'))
+        $('#cong')[0].checked = !!(msg.message - 0)
     });
 });
 
