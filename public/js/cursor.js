@@ -48,10 +48,10 @@ $(function() {
     //     console.log("nhan_den_khach")
     // }
 
-    $('#den_khach').on("change", denkhach)
+    $('.den_khach').on("change", denkhach)
     socket.on('den_khach', (msg) => {
-        console.log($('#den_khach'))
-        $('#den_khach')[0].checked = !!(msg.message - 0)
+        console.log($('.den_khach'))
+        $('.den_khach')[0].checked = !!(msg.message - 0)
     });
     $('#quat_khach').on("change", quatkhach)
     socket.on('quat_khach', (msg) => {
