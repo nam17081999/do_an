@@ -49,7 +49,7 @@ $(function() {
     }
     function cong(e) {
         socket.emit('cong', {})
-        console.log("nhan_den_khach")
+        console.log("nhan_cong")
     }
     function nuoc_nong(e) {
         socket.emit('nuoc_nong', {})
